@@ -13,7 +13,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles}>
+    <main className={styles.main}>
       <NavBar />
     </main>
   );
@@ -25,14 +25,23 @@ function NavBar() {
       <a href="">
         <img
           src="https://zetapp.in/_next/static/media/zet_new_logo.7adcc993.svg"
-          style={{ width: "90px", height: "45px" }}
+          className="logoImg"
         />
       </a>
       <div className="hamburgerMenu">
         <img
           src="https://zetapp.in/_next/static/media/menuIcon.bc0b4f4a.svg"
-          style={{ color: "transparent" }}
+          alt="hamburgerMenu"
         />
+      </div>
+      <div className="menu">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/partner-with-us">Partner With Us</a>
+        <a href="/blog">Blog</a>
+        <div className="dwnldZET" style={{ margin: "10px" }}>
+          <button>Download ZET</button>
+        </div>
       </div>
     </nav>
   );
