@@ -10,19 +10,40 @@ Require stack:
 
 Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
 */
-import styles from "./page.module.css";
 import { useState } from "react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <NavBar />
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "454px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "226px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "626px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "628px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "894px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "982px" }}
+      ></div>
+      <div
+        style={{ border: "1px solid red", width: "100vw", height: "307px" }}
+      ></div>
     </main>
   );
 }
 
 function NavBar() {
   const [blue, setBlue] = useState("blue");
+  const navArr = ["Home", "About Us", "Partner With Us", "Blog"];
 
   const setColor = function (e) {
     e.preventdefault();
@@ -31,22 +52,12 @@ function NavBar() {
   };
   return (
     <nav>
-      <a
-        href=""
-        style={{
-          textAlign: "right",
-          width: "19rem",
-          height: "3rem",
-          display: "flex",
-          justifyContent: "start",
-        }}
-      >
+      <a href="" className="logoImg">
         <img
           src="https://zetapp.in/_next/static/media/zet_new_logo.7adcc993.svg"
           style={{ position: "relative", left: "0px" }}
           className="logoImg"
         />
-        abc
       </a>
       <div className="hamburgerMenu">
         <img
@@ -55,34 +66,11 @@ function NavBar() {
         />
       </div>
       <div className="menu">
-        <a
-          href="/"
-          style={{ color: `${blue}`, padding: "0rem 1rem" }}
-          onMouseover={(e) => setColor}
-        >
-          Home
-        </a>
-        <a
-          href="/about"
-          style={{ color: "", padding: "0rem 1rem" }}
-          onMouseover={(e) => setColor}
-        >
-          About Us
-        </a>
-        <a
-          href="/partner-with-us"
-          style={{ color: "", padding: "0rem 1rem" }}
-          onMouseover={(e) => setColor}
-        >
-          Partner With Us
-        </a>
-        <a
-          href="/blog"
-          style={{ color: "", padding: "0rem 1rem" }}
-          onMouseover={(e) => setColor}
-        >
-          Blog
-        </a>
+        {navArr.map((navEl) => (
+          <>
+            <navArr href={`${navEl}`}>{navEl}</navArr>
+          </>
+        ))}
         <div className="dwnldZET" style={{ margin: "10px" }}>
           <button>Download ZET</button>
         </div>
