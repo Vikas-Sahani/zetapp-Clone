@@ -16,9 +16,7 @@ export default function Home() {
       <NavBar />
       <OurMission />
       <EvolvedOverYears />
-      <div
-        style={{ border: "1px solid red", width: "100vw", height: "626px" }}
-      ></div>
+      <Featured />
       <div
         style={{ border: "1px solid red", width: "100vw", height: "628px" }}
       ></div>
@@ -40,7 +38,7 @@ function NavBar() {
 
   return (
     <nav>
-      <a href="/" className="logoImg">
+      <a href="/" classNameName="logoImg">
         <img
           src="https://zetapp.in/_next/static/media/zet_new_logo.7adcc993.svg"
           alt="Zet-logo"
@@ -142,4 +140,136 @@ function EvolvedOverYears() {
   );
 }
 
-// function
+function Featured() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        paddingBottom: "6rem",
+        width: "100vw",
+        height: "18vw",
+      }}
+    >
+      <div
+        style={{
+          width: "78vw",
+          height: "6vh",
+          margin: "32px 0px",
+          alignItems: "start",
+        }}
+      >
+        <h1 style={{ fontSize: "40px", lineHeight: "40px", fontWeight: 800 }}>
+          Got Featured
+        </h1>
+      </div>
+
+      <div className="swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
+        <div className="swiper-wrapper">
+          <div
+            className="swiper-slide swiper-slide-active"
+            data-swiper-slide-index="0"
+            style="width: 179px; margin-right: 10px;"
+          >
+            <div className="sc-iHDLbo iclhEX">
+              <img
+                alt="EconomicTimes"
+                loading="lazy"
+                width="472"
+                height="320"
+                decoding="async"
+                data-nimg="1"
+                className="sc-bxiBER khFTeX"
+                style="color:transparent"
+                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=1080&amp;q=75 2x"
+                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=1080&amp;q=75"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide swiper-slide-next"
+            data-swiper-slide-index="1"
+            style="width: 179px; margin-right: 10px;"
+          >
+            <div className="sc-iHDLbo iclhEX">
+              <img
+                alt="Inc42"
+                loading="lazy"
+                width="472"
+                height="320"
+                decoding="async"
+                data-nimg="1"
+                className="sc-bxiBER khFTeX"
+                style="color:transparent"
+                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=1080&amp;q=75 2x"
+                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=1080&amp;q=75"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+            data-swiper-slide-index="2"
+            style="width: 179px; margin-right: 10px;"
+          >
+            <div className="sc-iHDLbo iclhEX">
+              <img
+                alt="Mint"
+                loading="lazy"
+                width="472"
+                height="320"
+                decoding="async"
+                data-nimg="1"
+                className="sc-bxiBER khFTeX"
+                style="color:transparent"
+                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75 2x"
+                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+            data-swiper-slide-index="3"
+            style="width: 179px; margin-right: 10px;"
+          >
+            <div className="sc-iHDLbo iclhEX">
+              <img
+                alt="YourStory"
+                loading="lazy"
+                width="472"
+                height="320"
+                decoding="async"
+                data-nimg="1"
+                className="sc-bxiBER khFTeX"
+                style="color:transparent"
+                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75 2x"
+                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75"
+              />
+            </div>
+          </div>
+          <div
+            className="swiper-slide"
+            data-swiper-slide-index="4"
+            style="width: 179px; margin-right: 10px;"
+          >
+            <div className="sc-iHDLbo iclhEX">
+              <img
+                alt="BusinessStandard"
+                loading="lazy"
+                width="472"
+                height="320"
+                decoding="async"
+                data-nimg="1"
+                className="sc-bxiBER khFTeX"
+                style="color:transparent"
+                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75 2x"
+                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="swiper-pagination"></div>
+      </div>
+    </div>
+  );
+}
