@@ -146,6 +146,7 @@ function Featured() {
       style={{
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
         flexDirection: "column",
         paddingBottom: "6rem",
         width: "100vw",
@@ -166,104 +167,119 @@ function Featured() {
       </div>
 
       <div className="swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
-        <div className="swiper-wrapper">
+        <div
+          className="swiper-wrapper"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div
             className="swiper-slide swiper-slide-active"
             data-swiper-slide-index="0"
-            style="width: 179px; margin-right: 10px;"
+            style={{ width: "179px", marginRight: "10px" }}
           >
             <div className="sc-iHDLbo iclhEX">
               <img
                 alt="EconomicTimes"
                 loading="lazy"
-                width="472"
-                height="320"
                 decoding="async"
                 data-nimg="1"
                 className="sc-bxiBER khFTeX"
-                style="color:transparent"
-                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=1080&amp;q=75 2x"
-                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&amp;w=1080&amp;q=75"
+                style={{
+                  width: "16.5vw",
+                  height: "17.5vh",
+                  color: "transparent",
+                }}
+                srcset="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&w=640&q=75"
+                src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&w=640&q=75"
               />
             </div>
           </div>
           <div
             className="swiper-slide swiper-slide-next"
             data-swiper-slide-index="1"
-            style="width: 179px; margin-right: 10px;"
+            style={{ width: "179px", marginRight: "10px" }}
           >
             <div className="sc-iHDLbo iclhEX">
               <img
                 alt="Inc42"
                 loading="lazy"
-                width="472"
-                height="320"
+                width="12.5vw"
+                height="8.5vh"
                 decoding="async"
                 data-nimg="1"
                 className="sc-bxiBER khFTeX"
-                style="color:transparent"
-                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=1080&amp;q=75 2x"
-                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&amp;w=1080&amp;q=75"
+                style={{
+                  width: "16.5vw",
+                  height: "17.5vh",
+                  color: "transparent",
+                }}
+                srcset="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&w=640&q=75"
+                src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInc42.7697aec8.png&w=640&q=75"
               />
             </div>
           </div>
           <div
             className="swiper-slide"
             data-swiper-slide-index="2"
-            style="width: 179px; margin-right: 10px;"
+            style={{ width: "179px", marginRight: "10px" }}
           >
             <div className="sc-iHDLbo iclhEX">
               <img
                 alt="Mint"
                 loading="lazy"
-                width="472"
-                height="320"
                 decoding="async"
                 data-nimg="1"
                 className="sc-bxiBER khFTeX"
-                style="color:transparent"
-                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75 2x"
-                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75"
+                style={{
+                  width: "16.5vw",
+                  height: "17.5vh",
+                  color: "transparent",
+                }}
+                srcset="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75 2x"
+                src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmint.410f3a1a.png&amp;w=1080&amp;q=75"
               />
             </div>
           </div>
           <div
             className="swiper-slide"
             data-swiper-slide-index="3"
-            style="width: 179px; margin-right: 10px;"
+            style={{ width: "179px", marginRight: "10px" }}
           >
             <div className="sc-iHDLbo iclhEX">
               <img
                 alt="YourStory"
                 loading="lazy"
-                width="472"
-                height="320"
                 decoding="async"
                 data-nimg="1"
                 className="sc-bxiBER khFTeX"
-                style="color:transparent"
-                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75 2x"
-                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75"
+                style={{
+                  width: "16.5vw",
+                  height: "17.5vh",
+                  color: "transparent",
+                }}
+                srcset="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75 2x"
+                src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYourStory.1efabc81.png&amp;w=1080&amp;q=75"
               />
             </div>
           </div>
           <div
             className="swiper-slide"
             data-swiper-slide-index="4"
-            style="width: 179px; margin-right: 10px;"
+            style={{ width: "179px", marginRight: "10px" }}
           >
             <div className="sc-iHDLbo iclhEX">
               <img
                 alt="BusinessStandard"
                 loading="lazy"
-                width="472"
-                height="320"
                 decoding="async"
                 data-nimg="1"
                 className="sc-bxiBER khFTeX"
-                style="color:transparent"
-                srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75 2x"
-                src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75"
+                style={{
+                  width: "16.5vw",
+                  height: "17.5vh",
+                  color: "transparent",
+                }}
+                srcset="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75 2x"
+                src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBusinessStandard.047c592d.png&amp;w=1080&amp;q=75"
               />
             </div>
           </div>
