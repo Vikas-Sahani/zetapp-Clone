@@ -19,9 +19,7 @@ export default function Home() {
       <OurMission />
       <EvolvedOverYears />
       <Featured />
-      <div
-        style={{ border: "1px solid red", width: "100vw", height: "628px" }}
-      ></div>
+      <Investors />
       <div
         style={{ border: "1px solid red", width: "100vw", height: "894px" }}
       ></div>
@@ -71,7 +69,7 @@ function NavBar() {
             </a>
           </>
         ))}
-        <div className="dwnldZET" style={{ margin: "10px" }}>
+        <div className="dwnldZET">
           <button>Download ZET</button>
         </div>
       </div>
@@ -175,7 +173,7 @@ function Featured() {
           justifyContent: "space-around",
         }}
       >
-        <div className="featuredImg" style={styles}>
+        <div className={styles.featuredImg}>
           <img
             alt="EconomicTimes"
             src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEconomicTimes.5724030e.png&w=640&q=75"
@@ -207,6 +205,14 @@ function Featured() {
         </div>
       </div>
       <div className="swiper-pagination"></div>
+    </div>
+  );
+}
+
+function Investors() {
+  return (
+    <div className="investors">
+      <h1>Meet the Investors</h1>
     </div>
   );
 }
