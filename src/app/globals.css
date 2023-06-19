@@ -51,14 +51,6 @@ nav{
   color:black
 }
 
-.hamburgerMenu{
-  display: none;
-}
-
-.featuredImg img{
-  width: 100%;
-  height: 100%;
-}
 
 .dwnldZET button{
   background: rgb(32, 117, 240); 
@@ -68,6 +60,25 @@ nav{
   height: 2.5vw;
   width: 120%;
   margin: 10px;
+}
+
+
+.hamburgerMenu{
+  display: none;
+}
+
+.featuredImg img{
+  width: 100%;
+  height: 100%;
+}
+h1{
+  width: 78vw;
+  height: 6vh;
+  margin: 32px 0px;
+  align-items: start;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
 }
 
 .investors{
@@ -81,4 +92,40 @@ nav{
 .investors h1{
   align-items: start;
   margin: 26px 0px;
+}
+
+.companyInvestor{
+  display: grid;
+  gap: 2vw;
+  margin-top: 4vw;
+  position: inherit;
+  z-index: 10;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  border: 1px solid green;
+  animation-name: sample;
+  opacity: 1;
+  
+}
+
+.companyInvestor div{
+  padding: 2rem;
+  z-index: 20;
+  position: relative;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes sample {
+  from{
+    opacity: 0;
+  transform: translate(0px, 0px)
+
+  }
+  to{
+    opacity: 1;
+  transform: translate(0px, -25px)
+
+  }
 }

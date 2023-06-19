@@ -13,6 +13,13 @@ Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-f
 
 import styles from "./page.module.css";
 export default function Home() {
+  window.addEventListener("scroll", function (e) {
+    if (window.scrollY > 900) {
+      let a = document.querySelectorAll(".companyInvestor");
+      console.log(a[0]);
+      // a[0].classList.add("slideUp");
+    }
+  });
   return (
     <main>
       <NavBar />
@@ -152,19 +159,7 @@ function Featured() {
         width: "100vw",
       }}
     >
-      <h1
-        style={{
-          width: "78vw",
-          height: "6vh",
-          margin: "32px 0px",
-          alignItems: "start",
-          fontSize: "40px",
-          lineHeight: "40px",
-          fontWeight: 800,
-        }}
-      >
-        Got Featured
-      </h1>
+      <h1>Got Featured</h1>
 
       <div
         style={{
@@ -213,6 +208,35 @@ function Investors() {
   return (
     <div className="investors">
       <h1>Meet the Investors</h1>
+      <div className="investorDetailed">
+        <div className="companyInvestor slideUp">
+          <div className="sequoia">
+            <img
+              alt="sequoia"
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInvCompany1.41d5c5bd.png&w=640&q=75"
+            />
+          </div>
+          <div className="nexus">
+            <img
+              alt="nexus"
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInvCompany2.3f604866.png&w=640&q=75"
+            />
+          </div>
+          <div className="generalcatalyst">
+            <img
+              alt="generalcatalyst"
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInvCompany3.c16095cb.png&w=640&q=75"
+            />
+          </div>
+          <div className="waterbridge">
+            <img
+              alt="waterbridge"
+              src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInvCompany4.9acb56c2.png&w=640&q=75"
+            />
+          </div>
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 }
