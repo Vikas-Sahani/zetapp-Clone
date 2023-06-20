@@ -80,6 +80,13 @@ h1{
   line-height: 40px;
   font-weight: 800;
 }
+p{
+  margin: 16px 0px;
+  align-items: start;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
 
 .investors{
   padding-top: 2vw;
@@ -93,7 +100,7 @@ h1{
   margin: 26px 50px;
 }
 
-.companyInvestor, .personInvestor{
+.companyInvestor, .personInvestor, .founders{
   display: grid;
   gap: 2vw;
   margin-top: 6vw;
@@ -148,4 +155,14 @@ h1{
   padding-top: 2vw;
   padding-bottom: 8vw;
   position: relative;
+}
+
+.founders{
+  opacity: 1;
+  padding: auto 25px;
+}
+
+.footer{
+  width: 100vw;
+  height: 100%;
 }

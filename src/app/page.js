@@ -5,12 +5,21 @@ export default function Home() {
   useEffect(function onFirstMount() {
     window.addEventListener("scroll", function () {
       let a = document.querySelectorAll(".companyInvestor");
-      if (window.scrollY > 1200) {
+      let b = document.querySelectorAll(".founders");
+      if (a[0].getBoundingClientRect().top == 600) {
         a[0].classList.add("slideUp");
       }
-      if (window.scrollY < 900) {
+      if (b[0].getBoundingClientRect().top == 600) {
+        b[0].classList.add("slideUp");
+      }
+      if (a[0].getBoundingClientRect().top == 700) {
         a[0].classList.remove("slideUp");
       }
+      if (b[0].getBoundingClientRect().top == 700) {
+        b[0].classList.remove("slideUp");
+      }
+      console.log(a[0].getBoundingClientRect());
+      console.log(b[0].getBoundingClientRect());
     });
     return () => {
       window.removeEventListener("scroll");
@@ -24,15 +33,10 @@ export default function Home() {
       <Featured />
       <Investors />
       <Founder />
-      <div
-        style={{ border: "1px solid red", width: "100vw", height: "894px" }}
-      ></div>
-      <div style={{ border: "1px solid red", width: "100vw", height: "982px" }}>
+      <div style={{ width: "100vw" }}>
         <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUsFooter.d2311d39.png&w=3840&q=100" />
       </div>
-      <div
-        style={{ border: "1px solid red", width: "100vw", height: "307px" }}
-      ></div>
+      <Footer />
     </main>
   );
 }
@@ -264,7 +268,7 @@ function Investors() {
     <div className="investors">
       <h1>Meet the Investors</h1>
       <div className="investorDetailed">
-        <div className="companyInvestor slideUp">
+        <div className="companyInvestor">
           <div className="sequoia">
             <img
               alt="sequoia"
@@ -324,11 +328,78 @@ function Founder() {
           margin: "24px 0px",
         }}
       >
-        <h1>Meet our Founders</h1>
+        <h1 style={{ width: "100%" }}>Meet our Founders</h1>
         <p>Few words from founders desk</p>
       </div>
-      <div>
-        <div></div>
+      <div className="founders">
+        <div className="founderDetail">
+          <div className="founderImg">
+            <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FManish.519c8845.png&w=640&q=75" />
+          </div>
+          <div>
+            <p>Manish Shara Co-Founder & CEO</p>
+            <div className="linkdinImg">
+              <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLinkedIn.6d99003c.png&w=96&q=75" />
+            </div>
+          </div>
+        </div>
+        <div className="founderDetail">
+          <div className="founderImg">
+            <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYash.126e24ca.png&w=640&q=75" />
+          </div>
+          <div>
+            <p>Yash Desai Co- Founder</p>
+            <div className="linkdinImg">
+              <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLinkedIn.6d99003c.png&w=96&q=75" />
+            </div>
+          </div>
+        </div>
+        <div className="founderDetail">
+          <div className="founderImg">
+            <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLokesh.ead063e7.png&w=640&q=75" />
+          </div>
+          <div>
+            <p>Lokesh Agarwal CTO</p>
+            <div className="linkdinImg">
+              <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLinkedIn.6d99003c.png&w=96&q=75" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="footer">
+      <img
+        style={{ width: "100%" }}
+        src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUs.085fb7a2.png&w=1920&q=100"
+        alt="footer"
+      />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          className="zetLogo"
+          style={{
+            display: "flex",
+            width: "100%",
+            borderBottom: "1px solid white",
+            padding: "20px 0px",
+          }}
+        >
+          <img
+            alt="Zet - Zindagi Set"
+            style={{ color: "transparent" }}
+            src="https://zetapp.in/_next/static/media/zet_logo_white.04e35c15.svg"
+          />
+        </div>
+        <div className="footerContent">
+          <div className="company"></div>
+          <div className="legal"></div>
+          <div className="contact"></div>
+          <div className="social"></div>
+        </div>
       </div>
     </div>
   );
