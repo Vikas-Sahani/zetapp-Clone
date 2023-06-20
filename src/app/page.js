@@ -1,16 +1,5 @@
 "use client";
-import Image from "next/image";
-/* Problem 👆🏼
-Parsing error: Cannot find module 'next/babel'
-Require stack:
-- D:\hp vikas\NextJS\Project\zetapp\node_modules\next\dist\compiled\babel\bundle.js
-- D:\hp vikas\NextJS\Project\zetapp\node_modules\next\dist\compiled\babel\eslint-parser.js
-- D:\hp vikas\NextJS\Project\zetapp\node_modules\eslint-config-next\parser.js
-- D:\hp vikas\NextJS\Project\zetapp\node_modules\@eslint\eslintrc\dist\eslintrc.cjseslint
 
-Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
-*/
-import { useEffect } from "react";
 import styles from "./page.module.css";
 export default function Home() {
   // useEffect(function onFirstMount() {
