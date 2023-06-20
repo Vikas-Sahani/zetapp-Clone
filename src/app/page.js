@@ -2,24 +2,38 @@
 import { useEffect } from "react";
 import styles from "./page.module.css";
 export default function Home() {
+  // useEffect(function onFirstMount() {
+  //   window.addEventListener("scroll", function () {
+  //     let a = document.querySelectorAll(".companyInvestor");
+  //     let b = document.querySelectorAll(".founders");
+  //     if (a[0].getBoundingClientRect().top == 600) {
+  //       a[0].classList.add("slideUp");
+  //     }
+  //     if (b[0].getBoundingClientRect().top == 600) {
+  //       b[0].classList.add("slideUp");
+  //     }
+  //     if (a[0].getBoundingClientRect().top == 700) {
+  //       a[0].classList.remove("slideUp");
+  //     }
+  //     if (b[0].getBoundingClientRect().top == 700) {
+  //       b[0].classList.remove("slideUp");
+  //     }
+  //     console.log(a[0].getBoundingClientRect());
+  //     console.log(b[0].getBoundingClientRect());
+  //   });
+  //   return () => {
+  //     window.removeEventListener("scroll");
+  //   };
+  // }, []);
   useEffect(function onFirstMount() {
     window.addEventListener("scroll", function () {
       let a = document.querySelectorAll(".companyInvestor");
-      let b = document.querySelectorAll(".founders");
-      if (a[0].getBoundingClientRect().top == 600) {
+      if (window.scrollY > 1200) {
         a[0].classList.add("slideUp");
       }
-      if (b[0].getBoundingClientRect().top == 600) {
-        b[0].classList.add("slideUp");
-      }
-      if (a[0].getBoundingClientRect().top == 700) {
+      if (window.scrollY < 900) {
         a[0].classList.remove("slideUp");
       }
-      if (b[0].getBoundingClientRect().top == 700) {
-        b[0].classList.remove("slideUp");
-      }
-      console.log(a[0].getBoundingClientRect());
-      console.log(b[0].getBoundingClientRect());
     });
     return () => {
       window.removeEventListener("scroll");
