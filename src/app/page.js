@@ -13,15 +13,15 @@ Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-f
 
 import styles from "./page.module.css";
 export default function Home() {
-  // window.addEventListener("scroll", function (e) {
-  //   let a = document.querySelectorAll(".companyInvestor");
-  //   if (window.scrollY > 1300) {
-  //     a[0].classList.add("slideUp");
-  //   }
-  //   if (window.scrollY < 900) {
-  //     a[0].classList.remove("slideUp");
-  //   }
-  // });
+  window.addEventListener("scroll", function (e) {
+    let a = document.querySelectorAll(".companyInvestor");
+    if (window.scrollY > 1300) {
+      a[0].classList.add("slideUp");
+    }
+    if (window.scrollY < 900) {
+      a[0].classList.remove("slideUp");
+    }
+  });
   return (
     <main>
       <NavBar />
