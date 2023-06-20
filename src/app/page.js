@@ -14,10 +14,12 @@ Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-f
 import styles from "./page.module.css";
 export default function Home() {
   window.addEventListener("scroll", function (e) {
-    if (window.scrollY > 900) {
-      let a = document.querySelectorAll(".companyInvestor");
-      console.log(a[0]);
-      // a[0].classList.add("slideUp");
+    let a = document.querySelectorAll(".companyInvestor");
+    if (window.scrollY > 1300) {
+      a[0].classList.add("slideUp");
+    }
+    if (window.scrollY < 900) {
+      a[0].classList.remove("slideUp");
     }
   });
   return (
@@ -205,6 +207,64 @@ function Featured() {
 }
 
 function Investors() {
+  const InvestorsArr = [
+    {
+      KunalShah: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv1.1c87bc0c.png&w=640&q=75",
+        name: "Kunal Shah",
+        founder: "Founder, CRED",
+      },
+    },
+    {
+      GauravMunjal: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv2.331b31f9.png&w=640&q=75",
+        name: "Gaurav Munjal",
+        founder: "Founder, UNACADEMY",
+      },
+    },
+    {
+      AakritVaish: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv3.1779e0d4.png&w=640&q=75",
+        name: "Aakrit Vaish",
+        founder: "Co-Founder, HAPTIK",
+      },
+    },
+    {
+      HarshilMathur: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv4.b9325fa0.png&w=640&q=75",
+        name: "Harshil Mathur",
+        founder: "Founder, RAZORPAY",
+      },
+    },
+    {
+      ViditAatrey: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv5.2e962217.png&w=640&q=75",
+        name: "Vidit Aatrey",
+        founder: "Founder & CEO, MEESHO",
+      },
+    },
+    {
+      AmrishRau: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv6.7a958b9d.png&w=640&q=75",
+        name: "Amrish Rau",
+        founder: "CEO, PINELABS",
+      },
+    },
+    {
+      LalitKeshre: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv7.3b8a633d.png&w=640&q=75",
+        name: "Lalit Keshre",
+        founder: "CEO, GROWW",
+      },
+    },
+    {
+      GokulRajaram: {
+        img: "https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInv8.bcbe6091.png&w=640&q=75",
+        name: "Gokul Rajaram",
+        founder: "Product, DOORDASH",
+      },
+    },
+  ];
   return (
     <div className="investors">
       <h1>Meet the Investors</h1>
@@ -235,7 +295,26 @@ function Investors() {
             />
           </div>
         </div>
-        <div></div>
+        <div className="personInvestor">
+          {InvestorsArr.map((investor, i) => {
+            return (
+              <div className={Object.keys(investor)[0]}>
+                <div className="investorImg">
+                  <img
+                    alt={investor[Object.keys(investor)[0]].name}
+                    src={investor[Object.keys(investor)[0]].img}
+                  />
+                </div>
+                <p className="investorName">
+                  {investor[Object.keys(investor)[0]].name}
+                </p>
+                <p className="investorFound">
+                  {investor[Object.keys(investor)[0]].founder}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
