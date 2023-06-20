@@ -1,0 +1,7 @@
+.featuredImg{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    width: 16.5vw;
+    height: 17.5vh;
+  }
