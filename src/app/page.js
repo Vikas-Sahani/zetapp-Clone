@@ -10,18 +10,24 @@ Require stack:
 
 Soulution => https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
 */
-
+import { useEffect } from "react";
 import styles from "./page.module.css";
 export default function Home() {
-  window.addEventListener("scroll", function (e) {
+  // useEffect(function onFirstMount() {
+  // function onScroll()
+  window.addEventListener("scroll", function () {
     let a = document.querySelectorAll(".companyInvestor");
-    if (window.scrollY > 1300) {
+    if (window.scrollY > 1200) {
       a[0].classList.add("slideUp");
     }
     if (window.scrollY < 900) {
       a[0].classList.remove("slideUp");
     }
   });
+  //   return () => {
+  //     window.removeEventListener("scroll");
+  //   };
+  // }, []);
   return (
     <main>
       <NavBar />
@@ -29,12 +35,13 @@ export default function Home() {
       <EvolvedOverYears />
       <Featured />
       <Investors />
+      <Founder />
       <div
         style={{ border: "1px solid red", width: "100vw", height: "894px" }}
       ></div>
-      <div
-        style={{ border: "1px solid red", width: "100vw", height: "982px" }}
-      ></div>
+      <div style={{ border: "1px solid red", width: "100vw", height: "982px" }}>
+        <img src="https://zetapp.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAboutUsFooter.d2311d39.png&w=3840&q=100" />
+      </div>
       <div
         style={{ border: "1px solid red", width: "100vw", height: "307px" }}
       ></div>
@@ -315,6 +322,25 @@ function Investors() {
             );
           })}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function Founder() {
+  return (
+    <div className="founderSection">
+      <div
+        style={{
+          textAlign: "center",
+          margin: "24px 0px",
+        }}
+      >
+        <h1>Meet our Founders</h1>
+        <p>Few words from founders desk</p>
+      </div>
+      <div>
+        <div></div>
       </div>
     </div>
   );
