@@ -23,7 +23,7 @@ export default function NavBar() {
             <a
               href={urlArr[i]}
               onClick={function (e) {
-                e.preventDefault();
+                // e.preventDefault();
                 let menus = e.target.parentNode.childNodes;
                 for (let idx = 0; idx < 4; idx++) {
                   menus[idx].style.color = "";
