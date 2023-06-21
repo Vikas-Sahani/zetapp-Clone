@@ -1,5 +1,6 @@
 export default function NavBar() {
   const navArr = ["Home", "About Us", "Partner With Us", "Blog"];
+  const urlArr = ["/", "about", "partner-with-us", "blog"];
 
   return (
     <nav>
@@ -20,7 +21,7 @@ export default function NavBar() {
         {navArr.map((navEl, i) => (
           <>
             <a
-              href={`${navEl === "Home" ? "/" : navEl}`}
+              href={urlArr[i]}
               onClick={function (e) {
                 e.preventDefault();
                 let menus = e.target.parentNode.childNodes;
